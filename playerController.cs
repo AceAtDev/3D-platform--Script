@@ -190,7 +190,7 @@ namespace ArmadaDev.AceG
 		{
 			if (isGrounded)
 			{
-				currentVerticalSpeed -= groundedGravity * Time.deltaTime;
+				currentVerticalSpeed = groundedGravity * Time.deltaTime;
 			}
 			else
 			{
