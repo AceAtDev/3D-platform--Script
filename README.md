@@ -1,66 +1,118 @@
-# Celeste-Style Unity Player Controller
+# Unity Celeste-Style Controller
 
-A custom Character Controller that recreates the tight, responsive movement mechanics found in the popular platformer game [Celeste](https://store.steampowered.com/app/504230/Celeste/).
+A beginner-friendly Character Controller for Unity that recreates the smooth, responsive movement from the popular game [Celeste](http://www.celestegame.com/).
 
-## Features
+![Celeste-Style Movement Demo](docs/demo.gif)
+*Add a GIF showcasing your controller in action*
 
-- **Precise Movement Physics**: Acceleration and deceleration that gives that snappy Celeste feel
-- **Variable Jump Height**: Release the jump button early for shorter jumps
-- **Jump Apex Controls**: Better control at the peak of your jump (like in Celeste)
-- **Custom Gravity**: Variable gravity that increases as you fall
-- **New Input System**: Built for Unity's new Input System package
+## Overview
+
+This controller gives your Unity game that satisfying, precise platformer feel with easy setup. Perfect for anyone making their first platformer or experienced developers who want Celeste's polished movement without building it from scratch.
+
+## What Makes This Special
+
+- 😊 **Easy to Set Up**: Just add to your player and configure in the Inspector
+- 🎮 **Feels Amazing**: Responsive controls that feel great from the first jump
+- 🎯 **Precise Movement**: That tight, snappy movement Celeste is famous for
+- 🔄 **Beginner Friendly**: Clearly commented code you can learn from
+
+## How It Works (In Simple Terms)
+
+- **Smooth Movement**: Your character speeds up and slows down naturally
+- **Jump Like Celeste**: Hold for higher jumps, release early for shorter hops
+- **Better Mid-Air Control**: Easier to maneuver at the peak of your jump
+- **Custom Gravity**: Falls feel natural and controllable
 
 ## Getting Started
 
-### Prerequisites
+### What You'll Need
 
 - Unity 2020.1 or newer
-- Unity's New Input System package
+- Unity's New Input System package (free from the Package Manager)
 
-### Setup
+### Quick Setup (5 Minutes)
 
-1. Add the `PlayerController.cs` script to your player GameObject
-2. Ensure your player has a `CharacterController` component attached
-3. Set up your Input Actions with:
-   - A `move` action (Vector2 value)
-   - A `Jump` action (Button value)
+1. Add the `PlayerController.cs` script to your player character
+2. Make sure your player has a `CharacterController` component
+3. Set up your controls with two actions:
+   - `move` action (for left/right movement)
+   - `Jump` action (for jumping)
 
-## Configuration
+That's it! Your character should now move with that Celeste-like feel.
 
-The controller has several parameters you can adjust in the Inspector:
+## Customizing Your Controller
 
-### Walking
-- **Acceleration**: How quickly the player reaches maximum speed
-- **Deceleration**: How quickly the player slows down when input is released
-- **Max Move Speed**: Maximum movement speed
-- **Apex Bonus**: Movement speed bonus at the jump apex for better control
+All settings can be adjusted in the Unity Inspector - no coding required!
 
-### Jump
-- **Jump Height**: Initial velocity applied when jumping
-- **Ended Jump Early Modifier**: Increased gravity when the jump button is released early
-- **Jump Apex Threshold**: Vertical velocity threshold for determining the jump apex
+### Movement Settings
 
-### Gravity
-- **Max Gravity**: Maximum gravity value applied during fall
-- **Min Gravity**: Minimum gravity applied at the start of a fall
-- **Grounded Gravity**: Small downward force applied when grounded
-- **Max Fall Speed**: Maximum falling speed
+- **Acceleration**: How quickly your character reaches full speed
+- **Deceleration**: How quickly your character stops when you release the controls
+- **Max Move Speed**: How fast your character can run
+- **Apex Bonus**: Extra control at the peak of your jump
 
-## Advanced Features
+### Jump Settings
 
-### Jump Apex Physics
-This controller implements the famous "jump apex" mechanic from Celeste, where you get better horizontal control at the peak of your jump. This helps with precise platforming and makes the controls feel responsive even in mid-air.
+- **Jump Height**: How high your character jumps
+- **Ended Jump Early Modifier**: How much shorter your jump is when you tap (instead of hold)
+- **Jump Apex Threshold**: Adjusts the "peak" of your jump for better control
 
-### Variable Jump Height
-By releasing the jump button early, you can perform shorter jumps for precise platforming - a key feature of Celeste's movement system.
+### Gravity Settings
+
+- **Max/Min Gravity**: Controls how your character falls
+- **Max Fall Speed**: Prevents falling too fast
+
+## Common Use Cases
+
+- **Your First Platformer**: Perfect for beginners making their first game
+- **Precision Platformers**: Great for challenging, Super Meat Boy-style games
+- **Metroidvanias**: Provides responsive movement for exploration games
+- **Speedrun Games**: The tight controls make this ideal for speed-based games
+
+## Example Projects
+
+Looking at examples helps beginners understand. Here are some ways to use the controller:
+
+```csharp
+// Example: How to check if the player is grounded
+if (_isGrounded) {
+    // Do something when the player lands
+    // Maybe play a sound or animation
+}
+
+// Example: How to detect when the player jumps
+if (_isJumping) {
+    // Do something when the player jumps
+    // Like spawn a particle effect
+}
+```
+
+## Extending the Controller
+
+Once you're comfortable, you can add more features:
+
+- Double jumping
+- Wall jumping
+- Dashing
+- Climbing
+
+## Need Help?
+
+- Check the commented code for explanations
+- Open an issue on GitHub if you're stuck
+- Feel free to ask questions!
 
 ## Credits
 
-- Inspired by the movement mechanics in [Celeste](https://store.steampowered.com/app/504230/Celeste/) by Extremely OK Games
+- Inspired by the amazing platformer [Celeste](http://www.celestegame.com/) by Extremely OK Games
+- Thanks to [ArmadaDev](https://github.com/ArmadaDev) for the original implementation
+
+## Quick favor
+- If you found this repo useful, star it so you can comeback to it always! Thanks!
 
 ## License
 
-This project is available under the MIT License - feel free to use and modify!
+This project is available under the MIT License - use it in any project, even commercial ones!
 
 ---
 
