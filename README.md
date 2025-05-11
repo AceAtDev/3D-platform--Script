@@ -105,7 +105,6 @@ Once you're comfortable, you can add more features:
 ## Credits
 
 - Inspired by the amazing platformer [Celeste](http://www.celestegame.com/) by Extremely OK Games
-- Thanks to [ArmadaDev](https://github.com/ArmadaDev) for the original implementation
 
 ## Quick favor
 - If you found this repo useful, star it so you can comeback to it always! Thanks!
