@@ -2,7 +2,7 @@
 
 A beginner-friendly Character Controller for Unity that recreates the smooth, responsive movement from the popular game [Celeste](http://www.celestegame.com/).
 
-![Celeste-Style Movement Demo](docs/demo.gif)
+![Celeste-Style Movement Demo](demo.gif)
 *Add a GIF showcasing your controller in action*
 
 ## Overview
